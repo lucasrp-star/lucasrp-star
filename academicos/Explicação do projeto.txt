@@ -1,0 +1,60 @@
+# Projeto: Calculadora de Média Flexível em C
+
+## 1. Descrição do Projeto
+
+Este projeto é um programa simples escrito em linguagem *C* que calcula a *média aritmética* de um conjunto de números (floats/decimais). O usuário tem total controle sobre a entrada, pois o programa solicita inicialmente quantos números (n) deseja calcular, e em seguida, pede cada número individualmente.
+
+*Funcionalidade Principal:*
+
+1.  O programa solicita ao usuário a quantidade de números a serem inseridos.
+2.  O programa solicita essa quantidade de números, somando-os.
+3.  O programa calcula a média e exibe o resultado final com duas casas decimais de precisão.
+
+## 2. Requisitos para Compilação e Execução
+
+Para compilar e rodar este programa, você precisa ter:
+
+* *Compilador C:* Um compilador C/C++ (como GCC, TDM-GCC ou o que estiver integrado ao Dev-C++).
+* *Sistema Operacional:* Compatível com o compilador (Windows, Linux, macOS).
+
+## 3. Como Compilar e Executar
+
+1.  *Salve* o arquivo programa_calculo_media.c.
+2.  *Compilação:* Abra o terminal ou prompt de comando (ou use o ambiente Dev-C++) e compile o código.
+    * Exemplo usando GCC no terminal:
+        bash
+        gcc programa_calculo_media.c -o media_calc
+        
+3.  *Execução:* Após a compilação, execute o arquivo gerado (no exemplo acima, media_calc).
+    * Exemplo no terminal:
+        bash
+        ./media_calc 
+        # ou
+        media_calc.exe
+        
+4.  Siga as instruções na tela:
+    * Primeiro, digite a quantidade de números (ex: 5).
+    * Em seguida, digite os números solicitados (podem ser decimais, como 7.5 ou 10.0).
+
+## 4. Análise do Código (Estrutura Técnica)
+
+O código utiliza as seguintes variáveis e lógica:
+
+| Variável | Tipo | Função |
+| :--- | :--- | :--- |
+| n | int | Armazena a *quantidade* de números que serão digitados (o divisor da média). |
+| i | int | Contador usado no loop (for) para solicitar cada número. |
+| num | double | Armazena cada número individualmente digitado pelo usuário. |
+| soma | double | Acumula a soma total dos números digitados. |
+| media | double | Armazena o resultado final do cálculo. |
+
+O cálculo principal ocorre em duas etapas:
+1.  O loop for itera n vezes, usando scanf("%lf", &num); para ler números decimais (double) e acumulando em soma.
+2.  Após o loop, a média é calculada com media = soma / n;.
+3.  O resultado é exibido com printf("A media dos %d numeros e: %.2lf\n", n, media);, formatando a saída para ter apenas *duas casas decimais* (.2lf).
+
+## 5. Autor
+
+* *Criado por:* \[Lucas /Rossi]
+* *Data:* \[ 18/10/25---------19/10/2025]
+*
